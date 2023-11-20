@@ -82,8 +82,6 @@ class ClipLoss(nn.Module):
         # calculated ground-truth and cache if enabled
         if self.prev_num_logits != num_logits or device not in self.labels:
             labels = torch.arange(num_logits, device=device, dtype=torch.long)
-            if self.world_size > 1 and self.local_loss:
-                labels = labels + num_logits * self.rank
             if self.cache_labels:
                 self.labels[device] = labels
                 self.prev_num_logits = num_logits
@@ -158,7 +156,7 @@ class TestNetwork(nn.Module):
 
 class TestDataset(torch.utils.data.Dataset):
     def __getitem__(self, index):
-        return torch.rand(768), torch.rand(512)
+        return torch.rand(768), torch.rand(768)
     def __len__(self):
         return 10000
 
@@ -188,9 +186,10 @@ def main(args):
 
     # Test instances
     model_x = TestNetwork(768).to(args.device)
-    model_y = TestNetwork(512).to(args.device)
+    model_y = TestNetwork(768).to(args.device)
     ds = TestDataset()
     dl = torch.utils.data.DataLoader(ds, batch_size=args.batch_size)
+    clip_loss = ClipLoss(rank=args.rank, world_size=args.world_size)
 
     if is_master(args):
         logging.info("Model:")
@@ -211,6 +210,9 @@ def main(args):
 
             all_x, all_y = gather_features([x, y], world_size=args.world_size)
             logging.info(f'rank={args.rank}: all_x.shape={all_x.shape}, [:2, 0]={all_x[:2, 0]}, all_y.shape={all_y.shape}, [:2, 0]={all_y[:2, 0]}')
+
+            loss = clip_loss(all_x, all_y, logit_scale=1.)
+            logging.info(f'rank={args.rank}, clip loss={loss}')
             break
         break
 
