@@ -1,0 +1,87 @@
+2023-11-20,18:33:55 | INFO | Added key: store_based_barrier_key:1 to store for rank: 0
+2023-11-20,18:33:55 | INFO | Added key: store_based_barrier_key:1 to store for rank: 1
+2023-11-20,18:33:55 | INFO | Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
+2023-11-20,18:33:55 | INFO | Running in distributed mode with multiple processes. Device: cuda:1.Process (global: 1, local 1), total 2.
+2023-11-20,18:33:55 | INFO | Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
+2023-11-20,18:33:55 | INFO | Running in distributed mode with multiple processes. Device: cuda:0.Process (global: 0, local 0), total 2.
+2023-11-20,18:34:00 | INFO | Model:
+2023-11-20,18:34:00 | INFO | TestNetwork(
+  (net): Linear(in_features=768, out_features=768, bias=True)
+)
+2023-11-20,18:34:00 | INFO | TestNetwork(
+  (net): Linear(in_features=768, out_features=768, bias=True)
+)
+2023-11-20,18:34:00 | INFO | rank=1: x.shape=torch.Size([64, 768]), x[:2, 0]=tensor([0.3457, 0.3079], device='cuda:1'), y.shape=torch.Size([64, 768]), y[:2, 0]=tensor([0.1166, 0.7942], device='cuda:1')
+2023-11-20,18:34:00 | INFO | rank=0: x.shape=torch.Size([64, 768]), x[:2, 0]=tensor([0.8196, 0.1447], device='cuda:0'), y.shape=torch.Size([64, 768]), y[:2, 0]=tensor([0.4292, 0.9283], device='cuda:0')
+2023-11-20,18:34:00 | INFO | rank=1: all_x.shape=torch.Size([128, 768]), [:2, 0]=tensor([388.9702, 380.3181], device='cuda:1', grad_fn=<SelectBackward0>), all_y.shape=torch.Size([128, 768]), [:2, 0]=tensor([384.4062, 384.3523], device='cuda:1', grad_fn=<SelectBackward0>)
+2023-11-20,18:34:00 | INFO | rank=0: all_x.shape=torch.Size([128, 768]), [:2, 0]=tensor([384.7704, 379.9385], device='cuda:0', grad_fn=<SelectBackward0>), all_y.shape=torch.Size([128, 768]), [:2, 0]=tensor([384.7610, 375.9147], device='cuda:0', grad_fn=<SelectBackward0>)
+2023-11-20,18:37:10 | INFO | Added key: store_based_barrier_key:1 to store for rank: 1
+2023-11-20,18:37:10 | INFO | Added key: store_based_barrier_key:1 to store for rank: 0
+2023-11-20,18:37:10 | INFO | Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
+2023-11-20,18:37:10 | INFO | Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
+2023-11-20,18:37:10 | INFO | Running in distributed mode with multiple processes. Device: cuda:0.Process (global: 0, local 0), total 2.
+2023-11-20,18:37:10 | INFO | Running in distributed mode with multiple processes. Device: cuda:1.Process (global: 1, local 1), total 2.
+2023-11-20,18:37:14 | INFO | Model:
+2023-11-20,18:37:14 | INFO | TestNetwork(
+  (net): Linear(in_features=768, out_features=768, bias=True)
+)
+2023-11-20,18:37:14 | INFO | TestNetwork(
+  (net): Linear(in_features=768, out_features=768, bias=True)
+)
+2023-11-20,18:37:15 | INFO | rank=0: x.shape=torch.Size([64, 768]), x[:2, 0]=tensor([0.8546, 0.8809], device='cuda:0'), y.shape=torch.Size([64, 768]), y[:2, 0]=tensor([0.4935, 0.4076], device='cuda:0')
+2023-11-20,18:37:15 | INFO | rank=1: x.shape=torch.Size([64, 768]), x[:2, 0]=tensor([0.2085, 0.8195], device='cuda:1'), y.shape=torch.Size([64, 768]), y[:2, 0]=tensor([0.2250, 0.4791], device='cuda:1')
+2023-11-20,18:37:15 | INFO | rank=0: all_x.shape=torch.Size([128, 768]), [:2, 0]=tensor([384.0842, 387.1070], device='cuda:0', grad_fn=<SelectBackward0>), all_y.shape=torch.Size([128, 768]), [:2, 0]=tensor([382.9816, 383.4313], device='cuda:0', grad_fn=<SelectBackward0>)
+2023-11-20,18:37:15 | INFO | rank=1: all_x.shape=torch.Size([128, 768]), [:2, 0]=tensor([384.7715, 389.0701], device='cuda:1', grad_fn=<SelectBackward0>), all_y.shape=torch.Size([128, 768]), [:2, 0]=tensor([387.4402, 376.9368], device='cuda:1', grad_fn=<SelectBackward0>)
+2023-11-20,18:38:10 | INFO | Added key: store_based_barrier_key:1 to store for rank: 0
+2023-11-20,18:38:10 | INFO | Added key: store_based_barrier_key:1 to store for rank: 1
+2023-11-20,18:38:10 | INFO | Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
+2023-11-20,18:38:10 | INFO | Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
+2023-11-20,18:38:10 | INFO | Running in distributed mode with multiple processes. Device: cuda:1.Process (global: 1, local 1), total 2.
+2023-11-20,18:38:10 | INFO | Running in distributed mode with multiple processes. Device: cuda:0.Process (global: 0, local 0), total 2.
+2023-11-20,18:38:15 | INFO | Model:
+2023-11-20,18:38:15 | INFO | TestNetwork(
+  (net): Linear(in_features=768, out_features=768, bias=True)
+)
+2023-11-20,18:38:15 | INFO | TestNetwork(
+  (net): Linear(in_features=768, out_features=768, bias=True)
+)
+2023-11-20,18:38:16 | INFO | rank=1: x.shape=torch.Size([64, 768]), x[:2, 0]=tensor([0.7515, 0.9755], device='cuda:1'), y.shape=torch.Size([64, 768]), y[:2, 0]=tensor([0.6050, 0.6821], device='cuda:1')
+2023-11-20,18:38:16 | INFO | rank=0: x.shape=torch.Size([64, 768]), x[:2, 0]=tensor([0.0761, 0.1246], device='cuda:0'), y.shape=torch.Size([64, 768]), y[:2, 0]=tensor([0.2909, 0.2922], device='cuda:0')
+2023-11-20,18:38:16 | INFO | rank=1: all_x.shape=torch.Size([128, 768]), [:2, 0]=tensor([379.3447, 384.1321], device='cuda:1', grad_fn=<SelectBackward0>), all_y.shape=torch.Size([128, 768]), [:2, 0]=tensor([388.0144, 376.8447], device='cuda:1', grad_fn=<SelectBackward0>)
+2023-11-20,18:38:16 | INFO | rank=0: all_x.shape=torch.Size([128, 768]), [:2, 0]=tensor([391.7067, 373.9378], device='cuda:0', grad_fn=<SelectBackward0>), all_y.shape=torch.Size([128, 768]), [:2, 0]=tensor([387.5280, 386.6797], device='cuda:0', grad_fn=<SelectBackward0>)
+2023-11-20,18:38:54 | INFO | Added key: store_based_barrier_key:1 to store for rank: 0
+2023-11-20,18:38:54 | INFO | Added key: store_based_barrier_key:1 to store for rank: 1
+2023-11-20,18:38:54 | INFO | Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
+2023-11-20,18:38:54 | INFO | Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
+2023-11-20,18:38:54 | INFO | Running in distributed mode with multiple processes. Device: cuda:1.Process (global: 1, local 1), total 2.
+2023-11-20,18:38:54 | INFO | Running in distributed mode with multiple processes. Device: cuda:0.Process (global: 0, local 0), total 2.
+2023-11-20,18:38:59 | INFO | Model:
+2023-11-20,18:38:59 | INFO | TestNetwork(
+  (net): Linear(in_features=768, out_features=768, bias=True)
+)
+2023-11-20,18:38:59 | INFO | TestNetwork(
+  (net): Linear(in_features=768, out_features=768, bias=True)
+)
+2023-11-20,18:38:59 | INFO | rank=0: x.shape=torch.Size([64, 768]), x[:2, 0]=tensor([0.4783, 0.7111], device='cuda:0'), y.shape=torch.Size([64, 768]), y[:2, 0]=tensor([0.3942, 0.8374], device='cuda:0')
+2023-11-20,18:38:59 | INFO | rank=1: x.shape=torch.Size([64, 768]), x[:2, 0]=tensor([0.3581, 0.9487], device='cuda:1'), y.shape=torch.Size([64, 768]), y[:2, 0]=tensor([0.6562, 0.7298], device='cuda:1')
+2023-11-20,18:38:59 | INFO | rank=0: all_x.shape=torch.Size([128, 768]), [:2, 0]=tensor([383.5946, 388.3325], device='cuda:0', grad_fn=<SelectBackward0>), all_y.shape=torch.Size([128, 768]), [:2, 0]=tensor([390.7563, 388.3757], device='cuda:0', grad_fn=<SelectBackward0>)
+2023-11-20,18:38:59 | INFO | rank=1: all_x.shape=torch.Size([128, 768]), [:2, 0]=tensor([391.0476, 384.7295], device='cuda:1', grad_fn=<SelectBackward0>), all_y.shape=torch.Size([128, 768]), [:2, 0]=tensor([377.4660, 387.1417], device='cuda:1', grad_fn=<SelectBackward0>)
+2023-11-20,18:40:01 | INFO | Added key: store_based_barrier_key:1 to store for rank: 0
+2023-11-20,18:40:01 | INFO | Added key: store_based_barrier_key:1 to store for rank: 1
+2023-11-20,18:40:01 | INFO | Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
+2023-11-20,18:40:01 | INFO | Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
+2023-11-20,18:40:01 | INFO | Running in distributed mode with multiple processes. Device: cuda:1.Process (global: 1, local 1), total 2.
+2023-11-20,18:40:01 | INFO | Running in distributed mode with multiple processes. Device: cuda:0.Process (global: 0, local 0), total 2.
+2023-11-20,18:40:06 | INFO | Model:
+2023-11-20,18:40:06 | INFO | TestNetwork(
+  (net): Linear(in_features=768, out_features=768, bias=True)
+)
+2023-11-20,18:40:06 | INFO | TestNetwork(
+  (net): Linear(in_features=768, out_features=768, bias=True)
+)
+2023-11-20,18:40:06 | INFO | rank=1: x.shape=torch.Size([64, 768]), x[:2, 0]=tensor([0.7501, 0.7088], device='cuda:1'), y.shape=torch.Size([64, 768]), y[:2, 0]=tensor([0.0492, 0.1450], device='cuda:1')
+2023-11-20,18:40:06 | INFO | rank=0: x.shape=torch.Size([64, 768]), x[:2, 0]=tensor([0.2234, 0.1964], device='cuda:0'), y.shape=torch.Size([64, 768]), y[:2, 0]=tensor([0.9489, 0.6563], device='cuda:0')
+2023-11-20,18:40:06 | INFO | rank=1: all_x.shape=torch.Size([128, 768]), [:2, 0]=tensor([379.0499, 371.5548], device='cuda:1', grad_fn=<SelectBackward0>), all_y.shape=torch.Size([128, 768]), [:2, 0]=tensor([386.9146, 380.4383], device='cuda:1', grad_fn=<SelectBackward0>)
+2023-11-20,18:40:06 | INFO | rank=0: all_x.shape=torch.Size([128, 768]), [:2, 0]=tensor([390.5387, 387.3217], device='cuda:0', grad_fn=<SelectBackward0>), all_y.shape=torch.Size([128, 768]), [:2, 0]=tensor([375.7908, 382.6122], device='cuda:0', grad_fn=<SelectBackward0>)
+2023-11-20,18:40:06 | INFO | rank=1, clip loss=6518330.5
+2023-11-20,18:40:06 | INFO | rank=0, clip loss=6518330.5
