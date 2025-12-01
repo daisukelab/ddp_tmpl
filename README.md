@@ -27,4 +27,10 @@ $ OMP_NUM_THREADS=1 CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node=2 main.py
 2023-11-20,18:22:57 | INFO | rank=1: x.shape=torch.Size([64, 768]), x[:2, 0]=tensor([0.4374, 0.6311], device='cuda:1'), y.shape=torch.Size([64, 512]), y[:2, 0]=tensor([0.5973, 0.8499], device='cuda:1')
 2023-11-20,18:22:57 | INFO | rank=0: all_x.shape=torch.Size([128, 768]), [:2, 0]=tensor([382.6943, 390.0041], device='cuda:0', grad_fn=<SelectBackward0>), all_y.shape=torch.Size([128, 512]), [:2, 0]=tensor([255.4693, 256.3419], device='cuda:0', grad_fn=<SelectBackward0>)
 2023-11-20,18:22:57 | INFO | rank=1: all_x.shape=torch.Size([128, 768]), [:2, 0]=tensor([389.6259, 385.8355], device='cuda:1', grad_fn=<SelectBackward0>), all_y.shape=torch.Size([128, 512]), [:2, 0]=tensor([252.2272, 253.5870], device='cuda:1', grad_fn=<SelectBackward0>)
-```
+```> /lab/ddp_tmpl/main.py(217)main()
+-> break
+(Pdb) tensor(6331563., device='cuda:0', grad_fn=<DivBackward0>)
+(Pdb) --KeyboardInterrupt--
+(Pdb) --KeyboardInterrupt--
+(Pdb) --KeyboardInterrupt--
+(Pdb) 
